@@ -1,37 +1,31 @@
 
-const renderAd = () => {
-
+startingPrice = 0;
 const main = document.querySelector(`main`);
-const content = `
-<h1>Freelancer Forum</h1>
-<h3>The average starting price is $30</h3>
-<h2>Available Freelancers</h2>
-<div>
-<h2>Name</h2>
-<ul>
-<li>Alice</li>
-<li>Bob</li>
-<li>Carol</li>
-</ul>
-</div>
-<div>
-<h2>Occupation</h2>
-<ul>
-<li>Writer</li>
-<li>Teacher</li>
-<li>Programmer</li>
-</ul>
-</div>
-<div>
-<h2>Starting Price</h2>
-<ul>
-<li>$30</li>
-<li>$50</li>
-<li>$70</li>
-</ul>
-</div>`;
+const h1 = document.createElement(`h1`);
+const h2 = document.createElement(`h2`);
+const h2_2 = document.createElement(`h2`);
+const nameDiv = document.createElement(`div`);
+const occupationDiv = document.createElement(`div`);
+const priceDiv = document.createElement(`div`);
+const ul = document.createElement(`ul`);
+const li = document.createElement(`li`);
 
-main.appendChild(content);
-};
 
-renderAd();
+main.style.border = `5px solid black`;
+h1.innerHTML = `Freelancer Forum`;
+h2.innerHTML = `The average starting price is ${startingPrice}`;
+h2_2.innerHTML = `Available Freelancers`;
+h2_2.style.fontWeight =`bold`;
+li.fontWeight =`bold`;
+
+
+main.appendChild(h1);
+main.appendChild(h2);
+main.appendChild(h2_2);
+ul.appendChild(li);
+nameDiv.appendChild(ul);
+occupationDiv.appendChild(ul);
+priceDiv.appendChild(ul);
+
+
+
